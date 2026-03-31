@@ -13,12 +13,6 @@ class Persona:
         self.edad = self.edad + 1 
 
 
-
-
-
-
-
-
 juanito = Persona('Juan', 10)
 carlos = Persona('Carlos', 20)
 
