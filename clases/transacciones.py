@@ -40,8 +40,14 @@ class GestorFinanzas:
     def __init__(self):
         self.transacciones = []
 
-    def agregar(self):
-        pass
+    def agregar(self, transaccion):
+        self.transacciones.append(transaccion)
+
+    def mostrar_todo(self):
+        if not self.transacciones:
+            print('Lista vacía')
+        for transaccion in self.transacciones:
+            transaccion.mostrar()
 
     def calcular_balance(self):
         pass
@@ -53,8 +59,12 @@ class GestorFinanzas:
         pass
 
 
+
+
+
 pago = Transaccion(100, "Pago de Servicio")
-pago.mostrar()
 
+gestor = GestorFinanzas()
+gestor.agregar(pago)
 
-
+gestor.mostrar_todo()
