@@ -7,3 +7,5 @@ Ventaja de usar with open():
 
 * Cierra el archivo automáticamente, incluso si ocurre un error.
 * Hace el código más limpio, seguro y evita olvidar cerrar el archivo manualmente.
+"
+PD: El documento "archivo.txt" se encuentra en la carpeta principal.
