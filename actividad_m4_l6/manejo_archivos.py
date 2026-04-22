@@ -66,7 +66,7 @@ print(contenido)
 archivo.close()
 
 
-# 5. Atributos y cierre
+# 5. ATRIBUTOS Y CIERRE
 # Abrir el archivo
 archivo = open("datos.txt", "r")
 
