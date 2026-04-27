@@ -1,40 +1,31 @@
-# Ecommerce CLI – Módulo 4
+# Ecommerce CLI - Modulo 4
 
-Aplicación de comercio electrónico por consola desarrollada con **Programación Orientada a Objetos en Python**.
+Aplicacion de ecommerce por consola hecha con Programacion Orientada a Objetos en Python.
 
-## Estructura del proyecto
+## Archivos
+
+- main.py - punto de entrada del programa
+- catalogo.py - clases Producto y Catalogo
+- carrito.py - clases ItemCarrito y Carrito
+- usuarios.py - clases Usuario, Admin y Cliente
+- excepciones.py - excepciones personalizadas
+
+## Como ejecutar
+
+Tener Python 3.8 o superior instalado, luego desde la carpeta del proyecto:
 
 ```
-ecommerce/
-├── main.py          # Punto de entrada
-├── catalogo.py      # Clases Producto y Catalogo
-├── carrito.py       # Clases ItemCarrito y Carrito
-├── usuarios.py      # Clases Usuario (base), Admin y Cliente
-├── excepciones.py   # Excepciones personalizadas
-├── catalogo.csv     # Generado automáticamente al guardar
-└── ordenes.txt      # Generado automáticamente al confirmar compras
-```
-
-## Cómo ejecutar
-
-```bash
-cd ecommerce
 python main.py
 ```
 
-> Requiere **Python 3.8+**. No necesita librerías externas.
+No necesita instalar ninguna libreria externa.
 
-## Roles disponibles
+## Roles
 
-| Rol     | Funcionalidades |
-|---------|----------------|
-| ADMIN   | Listar, crear, actualizar y eliminar productos; guardar catálogo en CSV |
-| CLIENTE | Ver catálogo, buscar, agregar al carrito, ver carrito y confirmar compra |
+- ADMIN: puede listar, crear, actualizar y eliminar productos, y guardar el catalogo en un archivo csv.
+- CLIENTE: puede ver el catalogo, buscar productos, agregar al carrito y confirmar compras.
 
-## Decisiones de diseño
+## Archivos que genera el programa
 
-- **Composición**: `Cliente` contiene un `Carrito`; `Catalogo` contiene múltiples `Producto`.
-- **Herencia**: `Admin` y `Cliente` heredan de `Usuario`.
-- **Excepciones personalizadas**: `ProductoNoEncontradoError`, `CantidadInvalidaError`, `CarritoVacioError`, `ArchivoError`.
-- El bloque `finally` en `Carrito.confirmar_compra` garantiza que el carrito se vacíe aunque falle la escritura del archivo.
-- El catálogo se carga desde `catalogo.csv` si existe; si no, se usan datos de ejemplo predefinidos.
+- catalogo.csv: se crea cuando el admin guarda el catalogo. La proxima vez que se inicie el programa, los productos se cargan desde ese archivo.
+- ordenes.txt: se genera automaticamente cada vez que un cliente confirma una compra.
