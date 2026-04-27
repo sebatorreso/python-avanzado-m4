@@ -1,0 +1,8 @@
+=== ORDEN DE COMPRA ===
+Fecha: 2026-04-27 19:13:13
+Cliente: Sebastian
+Productos:
+  - Lampara LED x5 = $74950.00
+Total: $74950.00
+=======================
+
